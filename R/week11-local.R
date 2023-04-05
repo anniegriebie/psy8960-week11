@@ -16,6 +16,10 @@ gss_tbl <- read_sav("../data/GSS2016.sav")%>%
   rename(workhours = MOSTHRS) %>%
   filter(complete.cases(workhours))
 
+#deleting other two work hours columns from dataset
+gss_tbl[ ,c('HRS1', 'HRS2')] <- list(NULL)
+
+
 gss_tbl <- gss_tbl[, colSums(is.na(gss_tbl)) < .75 *nrow(gss_tbl)] %>%
   mutate(workhours = as.integer(workhours))
 
