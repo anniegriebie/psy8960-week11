@@ -6,6 +6,10 @@ library(caret)
 library(tictoc)
 library(doParallel)
 
+#turn on parallel processing
+local_cluster <- makeCluster(7)
+registerDoParallel(local_cluster)
+
 ## Data Import and Cleaning
 
 gss_tbl <- read_sav("../data/GSS2016.sav")%>%
@@ -101,7 +105,6 @@ hov_cor_4 <- cor(
 
 ## Publication
 
-
 algo = c("OLS", "Elastic Net", "Random Forest", "eXtreme Gradient Boosting")
 cv_rsq <- c( str_remove(round(OLSR, 2), pattern = "^0"),
              str_remove(round(ElasticR, 2), pattern = "^0"),
@@ -129,6 +132,16 @@ table1_tbl <- tibble(
     format(round(hov_cor_3, 2), nsmall =2),
     format(round(hov_cor_4, 2), small =2)
   ), "^0")
+)
+
+# turn off parallel processing
+stopCluster(local_cluster)
+registerDoSEQ()
+
+table2_tbl <- tibble(
+  algo= c("lm", "Elastic Netc", "Random Forest", "Xtreme Gradient Boost"),
+  original
+  parrallelized
 )
 
 
