@@ -44,7 +44,7 @@ OLS <- train(
   preProcess = c("center", "scale", "nzv", "medianImpute"),
   trControl = trainControl(method="cv", indexOut = folds, number = 10, search = "grid", verboseIter=T)
 )
-toc()
+timeOLS <- toc()
 
 hov_cor_1 <- cor(
   predict(OLS, test_gss_tbl, na.action=na.pass),
@@ -61,7 +61,7 @@ ElasticNet <-
     preProcess = c("center", "scale", "nzv", "medianImpute"),
     trControl = trainControl(method="cv", indexOut = folds, number = 10, search = "grid", verboseIter=T)
   )
-toc()
+timeEN <- toc()
 hov_cor_2 <- cor(
   predict(ElasticNet, test_gss_tbl, na.action = na.pass),
   test_gss_tbl$workhours
@@ -77,7 +77,7 @@ RandomForest <-
     preProcess = "medianImpute",
     trControl = trainControl(method="cv", indexOut = folds, number = 10, search = "grid", verboseIter=T)
   )
-toc()
+timeRF <- toc()
 hov_cor_3 <- cor(
   predict(RandomForest, test_gss_tbl, na.action = na.pass),
   test_gss_tbl$workhours
@@ -93,7 +93,7 @@ boost <-
     preProcess = "medianImpute",
     trControl = trainControl(method="cv", indexOut = folds, number = 10, search = "grid", verboseIter=T)
   )
-toc()
+timeboost <- toc()
 hov_cor_4 <- cor(
   predict(boost, test_gss_tbl, na.action = na.pass),
   test_gss_tbl$workhours
