@@ -3,15 +3,17 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 library(tidyverse)
 library(haven)
 library(caret)
+library(tictoc)
+library(doParallel)
 
 ## Data Import and Cleaning
 
 gss_tbl <- read_sav("../data/GSS2016.sav")%>%
-  rename(workhours = HRS1) %>%
+  rename(workhours = MOSTHRS) %>%
   filter(complete.cases(workhours))
 
-gss_tbl <- gss_tbl[, which(colMeans(!is.na(gss_tbl)) >= 0.75)] %>%
-  mutate_all(as.numeric)
+gss_tbl <- gss_tbl[, colSums(is.na(gss_tbl)) < .75 *nrow(gss_tbl)] %>%
+  mutate(workhours = as.integer(workhours))
 
 
 ##Visualization 
@@ -33,6 +35,7 @@ test_gss_tbl <- shuffled_data[(split +1): nrow(shuffled_data),]
 
 folds <- createFolds(train_gss_tbl$workhours, 10)
 
+tic()
 OLS <- train(
   workhours ~ .,
   train_gss_tbl,
@@ -41,10 +44,14 @@ OLS <- train(
   preProcess = c("center", "scale", "nzv", "medianImpute"),
   trControl = trainControl(method="cv", indexOut = folds, number = 10, search = "grid", verboseIter=T)
 )
-OLSR<-OLS$results$Rsquared
-predictOLS <- predict(OLS, test_gss_tbl, na.action = na.pass)
-OLSho <-(cor(test_gss_tbl$workhours, predictOLS))^2
+toc()
 
+hov_cor_1 <- cor(
+  predict(OLS, test_gss_tbl, na.action=na.pass),
+  test_gss_tbl$workhours
+)^2
+
+tic()
 ElasticNet <-
   train(
     workhours ~ .,
@@ -54,10 +61,13 @@ ElasticNet <-
     preProcess = c("center", "scale", "nzv", "medianImpute"),
     trControl = trainControl(method="cv", indexOut = folds, number = 10, search = "grid", verboseIter=T)
   )
-ElasticR <-mean(ElasticNet$results$Rsquared)
-predictElastic <- predict(ElasticNet, test_gss_tbl, na.action = na.pass)
-Elasticho <-(cor(test_gss_tbl$workhours, predictElastic))^2
+toc()
+hov_cor_2 <- cor(
+  predict(ElasticNet, test_gss_tbl, na.action = na.pass),
+  test_gss_tbl$workhours
+)^2
 
+tic()
 RandomForest <-
   train(
     workhours ~ .,
@@ -67,10 +77,13 @@ RandomForest <-
     preProcess = "medianImpute",
     trControl = trainControl(method="cv", indexOut = folds, number = 10, search = "grid", verboseIter=T)
   )
-RandomR<- mean(RandomForest$results$Rsquared)
-predictRandom <- predict(RandomForest, test_gss_tbl, na.action = na.pass)
-Randomho <-(cor(test_gss_tbl$workhours, predictRandom))^2
+toc()
+hov_cor_3 <- cor(
+  predict(RandomForest, test_gss_tbl, na.action = na.pass),
+  test_gss_tbl$workhours
+)^2
 
+tic()
 boost <-
   train(
     workhours ~ .,
@@ -80,11 +93,14 @@ boost <-
     preProcess = "medianImpute",
     trControl = trainControl(method="cv", indexOut = folds, number = 10, search = "grid", verboseIter=T)
   )
-boostR <- mean(boost$results$Rsquared)
-predictboost <- predict(boost, test_gss_tbl, na.action = na.pass)
-boostho <-(cor(test_gss_tbl$workhours, predictboost))^2
+toc()
+hov_cor_4 <- cor(
+  predict(boost, test_gss_tbl, na.action = na.pass),
+  test_gss_tbl$workhours
+)^2
 
 ## Publication
+
 
 algo = c("OLS", "Elastic Net", "Random Forest", "eXtreme Gradient Boosting")
 cv_rsq <- c( str_remove(round(OLSR, 2), pattern = "^0"),
@@ -99,6 +115,20 @@ ho_rsq <- c( str_remove(round(OLSho, 2), pattern = "^0"),
              str_remove(round(boostho, 2), pattern = "^0")
 )
 
+
+summary(resamples(list(OLS, ElasticNet, RandomForest, boost)))
+resample_sum <- summary(list(OLS, ElasticNet, RandomForest, boost))
+
 table1_tbl <- tibble(
-  algo, cv_rsq, ho_rsq
+  algo= c("lm", "Elastic Netc", "Random Forest", "Xtreme Gradient Boost"),
+  cv_rsq = str_remove(round(resample_sum$statistic$Rsquared [ ,"Mean"], 2), 
+                      "^0"),
+  ho_rsq= str_remove(c(
+    format(round(hov_cor_1, 2), nsmall = 2),
+    format(round(hov_cor_2, 2), nsmall = 2),
+    format(round(hov_cor_3, 2), nsmall =2),
+    format(round(hov_cor_4, 2), small =2)
+  ), "^0")
 )
+
+
