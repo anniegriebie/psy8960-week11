@@ -184,7 +184,7 @@ Table3 <- tibble(
 Table4 <- tibble(
   algo= c("lm", "Elastic Netc", "Random Forest", "Xtreme Gradient Boost"),
   supercomputer = c(timeOLSnp$callback_msg, timeENnp$callback_msg, timeRFnp$callback_msg, timeboostnp$callback_msg),
-  "supercomputer-7" = c(timeOLS$callback_msg, timeEN$callback_msg, timeRF$callback_msg, timeboost$callback_msg)
+  "supercomputer-126" = c(timeOLS$callback_msg, timeEN$callback_msg, timeRF$callback_msg, timeboost$callback_msg)
 )
 
 #output
