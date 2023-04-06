@@ -189,7 +189,7 @@ table1_tbl <- tibble(
     format(round(hov_cor_1,2),nsmall=2),
     format(round(hov_cor_2,2),nsmall=2),
     format(round(hov_cor_3,2),nsmall=2),
-    format(round(hov_cor_3,2),nsmall=2)
+    format(round(hov_cor_4,2),nsmall=2)
   ),"^0")
 ) 
 

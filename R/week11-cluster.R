@@ -188,5 +188,5 @@ Table4 <- tibble(
 )
 
 #output
-write_csv(Table3, "Table3.csv")
-write_csv(Table4, "Table4.csv")
+write_csv(Table3, "table3.csv")
+write_csv(Table4, "table4.csv")
