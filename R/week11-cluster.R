@@ -17,12 +17,6 @@ gss_tbl[ ,c('HRS1', 'HRS2')] <- list(NULL)
 gss_tbl <- gss_tbl[, colSums(is.na(gss_tbl)) < .75 *nrow(gss_tbl)] %>%
   mutate(workhours = as.integer(workhours))
 
-##Visualization 
-
-ggplot(gss_tbl, aes(x = workhours)) +
-  geom_histogram() +
-  labs(x = "workhours", y="frequency", title= "Univariate Distribution of Workhours")
-
 ## Analysis 
 
 rows <- sample(nrow(gss_tbl))
@@ -99,7 +93,7 @@ hov_cor_4 <- cor(
 )^2
 
 
-local_cluster <- makeCluster(7)
+local_cluster <- makeCluster(14)
 registerDoParallel(local_cluster)
 
 tic()
@@ -173,7 +167,7 @@ registerDoSEQ()
 summary(resamples(list(OLS, ElasticNet, RandomForest, boost)))
 resample_sum <- summary(resamples(list(OLS, ElasticNet, RandomForest, boost)))
 
-table1_tbl <- tibble(
+Table3 <- tibble(
   algo = c("lm","Elastic Net","Random Forest","Xtreme Gradient Boost"),
   cv_rsq = str_remove(round(
     resample_sum$statistics$Rsquared[,"Mean"],2
@@ -187,8 +181,12 @@ table1_tbl <- tibble(
 ) 
 
 
-table2_tbl <- tibble(
+Table4 <- tibble(
   algo= c("lm", "Elastic Netc", "Random Forest", "Xtreme Gradient Boost"),
-  original = c(timeOLSnp$callback_msg, timeENnp$callback_msg, timeRFnp$callback_msg, timeboostnp$callback_msg),
-  parrallelized = c(timeOLS$callback_msg, timeEN$callback_msg, timeRF$callback_msg, timeboost$callback_msg)
+  supercomputer = c(timeOLSnp$callback_msg, timeENnp$callback_msg, timeRFnp$callback_msg, timeboostnp$callback_msg),
+  "supercomputer-7" = c(timeOLS$callback_msg, timeEN$callback_msg, timeRF$callback_msg, timeboost$callback_msg)
 )
+
+#output
+write_csv(Table3, "Table3.csv")
+write_csv(Table4, "Table4.csv")
