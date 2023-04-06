@@ -93,7 +93,7 @@ hov_cor_4 <- cor(
 )^2
 
 
-local_cluster <- makeCluster(14)
+local_cluster <- makeCluster(126)
 registerDoParallel(local_cluster)
 
 tic()
