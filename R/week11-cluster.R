@@ -91,7 +91,7 @@ hov_cor_4 <- cor(
 )^2
 
 
-local_cluster <- makeCluster(126)
+local_cluster <- makeCluster(14)
 registerDoParallel(local_cluster)
 
 tic()
@@ -167,9 +167,10 @@ resample_sum <- summary(resamples(list(OLS, ElasticNet, RandomForest, boost)))
 
 Table3 <- tibble(
   algo = c("lm","Elastic Net","Random Forest","Xtreme Gradient Boost"),
-  cv_rsq = str_remove(round(
+  cv_rsq = str_remove(
+    format(round(
     resample_sum$statistics$Rsquared[,"Mean"],2
-  ),"^0"),
+  ), nsmall=2),"^0"),
   ho_rsq = str_remove(c(
     format(round(hov_cor_1,2),nsmall=2),
     format(round(hov_cor_2,2),nsmall=2),
