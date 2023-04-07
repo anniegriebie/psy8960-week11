@@ -7,13 +7,12 @@ library(doParallel)
 set.seed(331)
 
 ## Data Import and Cleaning
-gss_tbl <- read_sav("../data/GSS2016.sav")%>%
+gssoriginal_tbl <- read_sav("../data/GSS2016.sav")%>%
   rename(workhours = MOSTHRS) %>%
-  filter(complete.cases(workhours))
+  filter(complete.cases(workhours)) %>%
+  select(-'HRS1', -'HRS2')
 
-gss_tbl[ ,c('HRS1', 'HRS2')] <- list(NULL)
-
-gss_tbl <- gss_tbl[, colSums(is.na(gss_tbl)) < .75 *nrow(gss_tbl)] %>%
+gss_tbl <- gssoriginal_tbl[, colSums(is.na(gssoriginal_tbl)) < .75 *nrow(gssoriginal_tbl)] %>%
   mutate(workhours = as.integer(workhours))
 
 ## Analysis 
