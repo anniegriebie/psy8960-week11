@@ -175,7 +175,7 @@ Table3 <- tibble(
     format(round(hov_cor_1,2),nsmall=2),
     format(round(hov_cor_2,2),nsmall=2),
     format(round(hov_cor_3,2),nsmall=2),
-    format(round(hov_cor_3,2),nsmall=2)
+    format(round(hov_cor_4,2),nsmall=2)
   ),"^0")
 ) 
 
@@ -183,7 +183,7 @@ Table3 <- tibble(
 Table4 <- tibble(
   algo= c("lm", "Elastic Netc", "Random Forest", "Xtreme Gradient Boost"),
   supercomputer = c(timeOLSnp$callback_msg, timeENnp$callback_msg, timeRFnp$callback_msg, timeboostnp$callback_msg),
-  "supercomputer-126" = c(timeOLS$callback_msg, timeEN$callback_msg, timeRF$callback_msg, timeboost$callback_msg)
+  "supercomputer-14" = c(timeOLS$callback_msg, timeEN$callback_msg, timeRF$callback_msg, timeboost$callback_msg)
 )
 
 #output

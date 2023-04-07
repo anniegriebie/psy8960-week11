@@ -1,0 +1,5 @@
+algo,cv_rsq,ho_rsq
+lm,.10,.01
+Elastic Net,.89,.46
+Random Forest,.93,.60
+Xtreme Gradient Boost,.97,.46

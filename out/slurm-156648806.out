@@ -1,0 +1,854 @@
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.1     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.2     ✔ tibble    3.2.1
+✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+✔ purrr     1.0.1     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Loading required package: lattice
+
+Attaching package: ‘caret’
+
+The following object is masked from ‘package:purrr’:
+
+    lift
+
+Loading required package: foreach
+
+Attaching package: ‘foreach’
+
+The following objects are masked from ‘package:purrr’:
+
+    accumulate, when
+
+Loading required package: iterators
+Loading required package: parallel
++ Fold01: intercept=TRUE 
+- Fold01: intercept=TRUE 
++ Fold02: intercept=TRUE 
+- Fold02: intercept=TRUE 
++ Fold03: intercept=TRUE 
+- Fold03: intercept=TRUE 
++ Fold04: intercept=TRUE 
+- Fold04: intercept=TRUE 
++ Fold05: intercept=TRUE 
+- Fold05: intercept=TRUE 
++ Fold06: intercept=TRUE 
+- Fold06: intercept=TRUE 
++ Fold07: intercept=TRUE 
+- Fold07: intercept=TRUE 
++ Fold08: intercept=TRUE 
+- Fold08: intercept=TRUE 
++ Fold09: intercept=TRUE 
+- Fold09: intercept=TRUE 
++ Fold10: intercept=TRUE 
+- Fold10: intercept=TRUE 
+Aggregating results
+Fitting final model on full training set
+Warning messages:
+1: In predict.lm(modelFit, newdata) :
+  prediction from a rank-deficient fit may be misleading
+2: In predict.lm(modelFit, newdata) :
+  prediction from a rank-deficient fit may be misleading
+3: In predict.lm(modelFit, newdata) :
+  prediction from a rank-deficient fit may be misleading
+4: In predict.lm(modelFit, newdata) :
+  prediction from a rank-deficient fit may be misleading
+5: In predict.lm(modelFit, newdata) :
+  prediction from a rank-deficient fit may be misleading
+6: In predict.lm(modelFit, newdata) :
+  prediction from a rank-deficient fit may be misleading
+7: In predict.lm(modelFit, newdata) :
+  prediction from a rank-deficient fit may be misleading
+8: In predict.lm(modelFit, newdata) :
+  prediction from a rank-deficient fit may be misleading
+9: In predict.lm(modelFit, newdata) :
+  prediction from a rank-deficient fit may be misleading
+10: In predict.lm(modelFit, newdata) :
+  prediction from a rank-deficient fit may be misleading
+6.443 sec elapsed
+Warning message:
+In predict.lm(modelFit, newdata) :
+  prediction from a rank-deficient fit may be misleading
++ Fold01: alpha=0.10, lambda=8.313 
+- Fold01: alpha=0.10, lambda=8.313 
++ Fold01: alpha=0.55, lambda=8.313 
+- Fold01: alpha=0.55, lambda=8.313 
++ Fold01: alpha=1.00, lambda=8.313 
+- Fold01: alpha=1.00, lambda=8.313 
++ Fold02: alpha=0.10, lambda=8.313 
+- Fold02: alpha=0.10, lambda=8.313 
++ Fold02: alpha=0.55, lambda=8.313 
+- Fold02: alpha=0.55, lambda=8.313 
++ Fold02: alpha=1.00, lambda=8.313 
+- Fold02: alpha=1.00, lambda=8.313 
++ Fold03: alpha=0.10, lambda=8.313 
+- Fold03: alpha=0.10, lambda=8.313 
++ Fold03: alpha=0.55, lambda=8.313 
+- Fold03: alpha=0.55, lambda=8.313 
++ Fold03: alpha=1.00, lambda=8.313 
+- Fold03: alpha=1.00, lambda=8.313 
++ Fold04: alpha=0.10, lambda=8.313 
+- Fold04: alpha=0.10, lambda=8.313 
++ Fold04: alpha=0.55, lambda=8.313 
+- Fold04: alpha=0.55, lambda=8.313 
++ Fold04: alpha=1.00, lambda=8.313 
+- Fold04: alpha=1.00, lambda=8.313 
++ Fold05: alpha=0.10, lambda=8.313 
+- Fold05: alpha=0.10, lambda=8.313 
++ Fold05: alpha=0.55, lambda=8.313 
+- Fold05: alpha=0.55, lambda=8.313 
++ Fold05: alpha=1.00, lambda=8.313 
+- Fold05: alpha=1.00, lambda=8.313 
++ Fold06: alpha=0.10, lambda=8.313 
+- Fold06: alpha=0.10, lambda=8.313 
++ Fold06: alpha=0.55, lambda=8.313 
+- Fold06: alpha=0.55, lambda=8.313 
++ Fold06: alpha=1.00, lambda=8.313 
+- Fold06: alpha=1.00, lambda=8.313 
++ Fold07: alpha=0.10, lambda=8.313 
+- Fold07: alpha=0.10, lambda=8.313 
++ Fold07: alpha=0.55, lambda=8.313 
+- Fold07: alpha=0.55, lambda=8.313 
++ Fold07: alpha=1.00, lambda=8.313 
+- Fold07: alpha=1.00, lambda=8.313 
++ Fold08: alpha=0.10, lambda=8.313 
+- Fold08: alpha=0.10, lambda=8.313 
++ Fold08: alpha=0.55, lambda=8.313 
+- Fold08: alpha=0.55, lambda=8.313 
++ Fold08: alpha=1.00, lambda=8.313 
+- Fold08: alpha=1.00, lambda=8.313 
++ Fold09: alpha=0.10, lambda=8.313 
+- Fold09: alpha=0.10, lambda=8.313 
++ Fold09: alpha=0.55, lambda=8.313 
+- Fold09: alpha=0.55, lambda=8.313 
++ Fold09: alpha=1.00, lambda=8.313 
+- Fold09: alpha=1.00, lambda=8.313 
++ Fold10: alpha=0.10, lambda=8.313 
+- Fold10: alpha=0.10, lambda=8.313 
++ Fold10: alpha=0.55, lambda=8.313 
+- Fold10: alpha=0.55, lambda=8.313 
++ Fold10: alpha=1.00, lambda=8.313 
+- Fold10: alpha=1.00, lambda=8.313 
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0.1, lambda = 0.831 on full training set
+14.701 sec elapsed
++ Fold01: mtry=  2, min.node.size=5, splitrule=variance 
+- Fold01: mtry=  2, min.node.size=5, splitrule=variance 
++ Fold01: mtry= 32, min.node.size=5, splitrule=variance 
+- Fold01: mtry= 32, min.node.size=5, splitrule=variance 
++ Fold01: mtry=535, min.node.size=5, splitrule=variance 
+- Fold01: mtry=535, min.node.size=5, splitrule=variance 
++ Fold01: mtry=  2, min.node.size=5, splitrule=extratrees 
+- Fold01: mtry=  2, min.node.size=5, splitrule=extratrees 
++ Fold01: mtry= 32, min.node.size=5, splitrule=extratrees 
+- Fold01: mtry= 32, min.node.size=5, splitrule=extratrees 
++ Fold01: mtry=535, min.node.size=5, splitrule=extratrees 
+- Fold01: mtry=535, min.node.size=5, splitrule=extratrees 
++ Fold02: mtry=  2, min.node.size=5, splitrule=variance 
+- Fold02: mtry=  2, min.node.size=5, splitrule=variance 
++ Fold02: mtry= 32, min.node.size=5, splitrule=variance 
+- Fold02: mtry= 32, min.node.size=5, splitrule=variance 
++ Fold02: mtry=535, min.node.size=5, splitrule=variance 
+- Fold02: mtry=535, min.node.size=5, splitrule=variance 
++ Fold02: mtry=  2, min.node.size=5, splitrule=extratrees 
+- Fold02: mtry=  2, min.node.size=5, splitrule=extratrees 
++ Fold02: mtry= 32, min.node.size=5, splitrule=extratrees 
+- Fold02: mtry= 32, min.node.size=5, splitrule=extratrees 
++ Fold02: mtry=535, min.node.size=5, splitrule=extratrees 
+- Fold02: mtry=535, min.node.size=5, splitrule=extratrees 
++ Fold03: mtry=  2, min.node.size=5, splitrule=variance 
+- Fold03: mtry=  2, min.node.size=5, splitrule=variance 
++ Fold03: mtry= 32, min.node.size=5, splitrule=variance 
+- Fold03: mtry= 32, min.node.size=5, splitrule=variance 
++ Fold03: mtry=535, min.node.size=5, splitrule=variance 
+- Fold03: mtry=535, min.node.size=5, splitrule=variance 
++ Fold03: mtry=  2, min.node.size=5, splitrule=extratrees 
+- Fold03: mtry=  2, min.node.size=5, splitrule=extratrees 
++ Fold03: mtry= 32, min.node.size=5, splitrule=extratrees 
+- Fold03: mtry= 32, min.node.size=5, splitrule=extratrees 
++ Fold03: mtry=535, min.node.size=5, splitrule=extratrees 
+- Fold03: mtry=535, min.node.size=5, splitrule=extratrees 
++ Fold04: mtry=  2, min.node.size=5, splitrule=variance 
+- Fold04: mtry=  2, min.node.size=5, splitrule=variance 
++ Fold04: mtry= 32, min.node.size=5, splitrule=variance 
+- Fold04: mtry= 32, min.node.size=5, splitrule=variance 
++ Fold04: mtry=535, min.node.size=5, splitrule=variance 
+- Fold04: mtry=535, min.node.size=5, splitrule=variance 
++ Fold04: mtry=  2, min.node.size=5, splitrule=extratrees 
+- Fold04: mtry=  2, min.node.size=5, splitrule=extratrees 
++ Fold04: mtry= 32, min.node.size=5, splitrule=extratrees 
+- Fold04: mtry= 32, min.node.size=5, splitrule=extratrees 
++ Fold04: mtry=535, min.node.size=5, splitrule=extratrees 
+- Fold04: mtry=535, min.node.size=5, splitrule=extratrees 
++ Fold05: mtry=  2, min.node.size=5, splitrule=variance 
+- Fold05: mtry=  2, min.node.size=5, splitrule=variance 
++ Fold05: mtry= 32, min.node.size=5, splitrule=variance 
+- Fold05: mtry= 32, min.node.size=5, splitrule=variance 
++ Fold05: mtry=535, min.node.size=5, splitrule=variance 
+- Fold05: mtry=535, min.node.size=5, splitrule=variance 
++ Fold05: mtry=  2, min.node.size=5, splitrule=extratrees 
+- Fold05: mtry=  2, min.node.size=5, splitrule=extratrees 
++ Fold05: mtry= 32, min.node.size=5, splitrule=extratrees 
+- Fold05: mtry= 32, min.node.size=5, splitrule=extratrees 
++ Fold05: mtry=535, min.node.size=5, splitrule=extratrees 
+- Fold05: mtry=535, min.node.size=5, splitrule=extratrees 
++ Fold06: mtry=  2, min.node.size=5, splitrule=variance 
+- Fold06: mtry=  2, min.node.size=5, splitrule=variance 
++ Fold06: mtry= 32, min.node.size=5, splitrule=variance 
+- Fold06: mtry= 32, min.node.size=5, splitrule=variance 
++ Fold06: mtry=535, min.node.size=5, splitrule=variance 
+- Fold06: mtry=535, min.node.size=5, splitrule=variance 
++ Fold06: mtry=  2, min.node.size=5, splitrule=extratrees 
+- Fold06: mtry=  2, min.node.size=5, splitrule=extratrees 
++ Fold06: mtry= 32, min.node.size=5, splitrule=extratrees 
+- Fold06: mtry= 32, min.node.size=5, splitrule=extratrees 
++ Fold06: mtry=535, min.node.size=5, splitrule=extratrees 
+- Fold06: mtry=535, min.node.size=5, splitrule=extratrees 
++ Fold07: mtry=  2, min.node.size=5, splitrule=variance 
+- Fold07: mtry=  2, min.node.size=5, splitrule=variance 
++ Fold07: mtry= 32, min.node.size=5, splitrule=variance 
+- Fold07: mtry= 32, min.node.size=5, splitrule=variance 
++ Fold07: mtry=535, min.node.size=5, splitrule=variance 
+- Fold07: mtry=535, min.node.size=5, splitrule=variance 
++ Fold07: mtry=  2, min.node.size=5, splitrule=extratrees 
+- Fold07: mtry=  2, min.node.size=5, splitrule=extratrees 
++ Fold07: mtry= 32, min.node.size=5, splitrule=extratrees 
+- Fold07: mtry= 32, min.node.size=5, splitrule=extratrees 
++ Fold07: mtry=535, min.node.size=5, splitrule=extratrees 
+- Fold07: mtry=535, min.node.size=5, splitrule=extratrees 
++ Fold08: mtry=  2, min.node.size=5, splitrule=variance 
+- Fold08: mtry=  2, min.node.size=5, splitrule=variance 
++ Fold08: mtry= 32, min.node.size=5, splitrule=variance 
+- Fold08: mtry= 32, min.node.size=5, splitrule=variance 
++ Fold08: mtry=535, min.node.size=5, splitrule=variance 
+- Fold08: mtry=535, min.node.size=5, splitrule=variance 
++ Fold08: mtry=  2, min.node.size=5, splitrule=extratrees 
+- Fold08: mtry=  2, min.node.size=5, splitrule=extratrees 
++ Fold08: mtry= 32, min.node.size=5, splitrule=extratrees 
+- Fold08: mtry= 32, min.node.size=5, splitrule=extratrees 
++ Fold08: mtry=535, min.node.size=5, splitrule=extratrees 
+- Fold08: mtry=535, min.node.size=5, splitrule=extratrees 
++ Fold09: mtry=  2, min.node.size=5, splitrule=variance 
+- Fold09: mtry=  2, min.node.size=5, splitrule=variance 
++ Fold09: mtry= 32, min.node.size=5, splitrule=variance 
+- Fold09: mtry= 32, min.node.size=5, splitrule=variance 
++ Fold09: mtry=535, min.node.size=5, splitrule=variance 
+- Fold09: mtry=535, min.node.size=5, splitrule=variance 
++ Fold09: mtry=  2, min.node.size=5, splitrule=extratrees 
+- Fold09: mtry=  2, min.node.size=5, splitrule=extratrees 
++ Fold09: mtry= 32, min.node.size=5, splitrule=extratrees 
+- Fold09: mtry= 32, min.node.size=5, splitrule=extratrees 
++ Fold09: mtry=535, min.node.size=5, splitrule=extratrees 
+- Fold09: mtry=535, min.node.size=5, splitrule=extratrees 
++ Fold10: mtry=  2, min.node.size=5, splitrule=variance 
+- Fold10: mtry=  2, min.node.size=5, splitrule=variance 
++ Fold10: mtry= 32, min.node.size=5, splitrule=variance 
+- Fold10: mtry= 32, min.node.size=5, splitrule=variance 
++ Fold10: mtry=535, min.node.size=5, splitrule=variance 
+- Fold10: mtry=535, min.node.size=5, splitrule=variance 
++ Fold10: mtry=  2, min.node.size=5, splitrule=extratrees 
+- Fold10: mtry=  2, min.node.size=5, splitrule=extratrees 
++ Fold10: mtry= 32, min.node.size=5, splitrule=extratrees 
+- Fold10: mtry= 32, min.node.size=5, splitrule=extratrees 
++ Fold10: mtry=535, min.node.size=5, splitrule=extratrees 
+- Fold10: mtry=535, min.node.size=5, splitrule=extratrees 
+Aggregating results
+Selecting tuning parameters
+Fitting mtry = 535, splitrule = extratrees, min.node.size = 5 on full training set
+48.747 sec elapsed
++ Fold01: lambda=0e+00, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold01: lambda=0e+00, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold01: lambda=1e-01, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold01: lambda=1e-01, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold01: lambda=1e-04, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold01: lambda=1e-04, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold01: lambda=0e+00, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold01: lambda=0e+00, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold01: lambda=1e-01, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold01: lambda=1e-01, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold01: lambda=1e-04, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold01: lambda=1e-04, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold01: lambda=0e+00, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold01: lambda=0e+00, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold01: lambda=1e-01, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold01: lambda=1e-01, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold01: lambda=1e-04, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold01: lambda=1e-04, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold01: lambda=0e+00, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold01: lambda=0e+00, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold01: lambda=1e-01, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold01: lambda=1e-01, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold01: lambda=1e-04, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold01: lambda=1e-04, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold01: lambda=0e+00, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold01: lambda=0e+00, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold01: lambda=1e-01, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold01: lambda=1e-01, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold01: lambda=1e-04, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold01: lambda=1e-04, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold01: lambda=0e+00, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold01: lambda=0e+00, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold01: lambda=1e-01, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold01: lambda=1e-01, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold01: lambda=1e-04, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold01: lambda=1e-04, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold01: lambda=0e+00, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold01: lambda=0e+00, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold01: lambda=1e-01, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold01: lambda=1e-01, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold01: lambda=1e-04, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold01: lambda=1e-04, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold01: lambda=0e+00, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold01: lambda=0e+00, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold01: lambda=1e-01, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold01: lambda=1e-01, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold01: lambda=1e-04, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold01: lambda=1e-04, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold01: lambda=0e+00, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold01: lambda=0e+00, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold01: lambda=1e-01, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold01: lambda=1e-01, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold01: lambda=1e-04, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold01: lambda=1e-04, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold02: lambda=0e+00, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold02: lambda=0e+00, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold02: lambda=1e-01, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold02: lambda=1e-01, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold02: lambda=1e-04, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold02: lambda=1e-04, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold02: lambda=0e+00, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold02: lambda=0e+00, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold02: lambda=1e-01, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold02: lambda=1e-01, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold02: lambda=1e-04, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold02: lambda=1e-04, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold02: lambda=0e+00, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold02: lambda=0e+00, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold02: lambda=1e-01, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold02: lambda=1e-01, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold02: lambda=1e-04, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold02: lambda=1e-04, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold02: lambda=0e+00, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold02: lambda=0e+00, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold02: lambda=1e-01, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold02: lambda=1e-01, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold02: lambda=1e-04, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold02: lambda=1e-04, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold02: lambda=0e+00, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold02: lambda=0e+00, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold02: lambda=1e-01, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold02: lambda=1e-01, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold02: lambda=1e-04, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold02: lambda=1e-04, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold02: lambda=0e+00, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold02: lambda=0e+00, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold02: lambda=1e-01, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold02: lambda=1e-01, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold02: lambda=1e-04, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold02: lambda=1e-04, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold02: lambda=0e+00, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold02: lambda=0e+00, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold02: lambda=1e-01, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold02: lambda=1e-01, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold02: lambda=1e-04, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold02: lambda=1e-04, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold02: lambda=0e+00, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold02: lambda=0e+00, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold02: lambda=1e-01, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold02: lambda=1e-01, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold02: lambda=1e-04, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold02: lambda=1e-04, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold02: lambda=0e+00, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold02: lambda=0e+00, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold02: lambda=1e-01, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold02: lambda=1e-01, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold02: lambda=1e-04, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold02: lambda=1e-04, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold03: lambda=0e+00, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold03: lambda=0e+00, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold03: lambda=1e-01, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold03: lambda=1e-01, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold03: lambda=1e-04, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold03: lambda=1e-04, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold03: lambda=0e+00, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold03: lambda=0e+00, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold03: lambda=1e-01, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold03: lambda=1e-01, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold03: lambda=1e-04, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold03: lambda=1e-04, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold03: lambda=0e+00, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold03: lambda=0e+00, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold03: lambda=1e-01, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold03: lambda=1e-01, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold03: lambda=1e-04, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold03: lambda=1e-04, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold03: lambda=0e+00, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold03: lambda=0e+00, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold03: lambda=1e-01, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold03: lambda=1e-01, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold03: lambda=1e-04, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold03: lambda=1e-04, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold03: lambda=0e+00, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold03: lambda=0e+00, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold03: lambda=1e-01, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold03: lambda=1e-01, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold03: lambda=1e-04, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold03: lambda=1e-04, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold03: lambda=0e+00, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold03: lambda=0e+00, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold03: lambda=1e-01, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold03: lambda=1e-01, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold03: lambda=1e-04, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold03: lambda=1e-04, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold03: lambda=0e+00, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold03: lambda=0e+00, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold03: lambda=1e-01, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold03: lambda=1e-01, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold03: lambda=1e-04, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold03: lambda=1e-04, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold03: lambda=0e+00, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold03: lambda=0e+00, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold03: lambda=1e-01, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold03: lambda=1e-01, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold03: lambda=1e-04, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold03: lambda=1e-04, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold03: lambda=0e+00, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold03: lambda=0e+00, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold03: lambda=1e-01, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold03: lambda=1e-01, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold03: lambda=1e-04, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold03: lambda=1e-04, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold04: lambda=0e+00, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold04: lambda=0e+00, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold04: lambda=1e-01, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold04: lambda=1e-01, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold04: lambda=1e-04, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold04: lambda=1e-04, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold04: lambda=0e+00, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold04: lambda=0e+00, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold04: lambda=1e-01, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold04: lambda=1e-01, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold04: lambda=1e-04, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold04: lambda=1e-04, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold04: lambda=0e+00, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold04: lambda=0e+00, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold04: lambda=1e-01, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold04: lambda=1e-01, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold04: lambda=1e-04, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold04: lambda=1e-04, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold04: lambda=0e+00, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold04: lambda=0e+00, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold04: lambda=1e-01, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold04: lambda=1e-01, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold04: lambda=1e-04, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold04: lambda=1e-04, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold04: lambda=0e+00, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold04: lambda=0e+00, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold04: lambda=1e-01, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold04: lambda=1e-01, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold04: lambda=1e-04, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold04: lambda=1e-04, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold04: lambda=0e+00, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold04: lambda=0e+00, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold04: lambda=1e-01, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold04: lambda=1e-01, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold04: lambda=1e-04, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold04: lambda=1e-04, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold04: lambda=0e+00, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold04: lambda=0e+00, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold04: lambda=1e-01, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold04: lambda=1e-01, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold04: lambda=1e-04, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold04: lambda=1e-04, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold04: lambda=0e+00, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold04: lambda=0e+00, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold04: lambda=1e-01, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold04: lambda=1e-01, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold04: lambda=1e-04, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold04: lambda=1e-04, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold04: lambda=0e+00, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold04: lambda=0e+00, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold04: lambda=1e-01, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold04: lambda=1e-01, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold04: lambda=1e-04, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold04: lambda=1e-04, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold05: lambda=0e+00, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold05: lambda=0e+00, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold05: lambda=1e-01, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold05: lambda=1e-01, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold05: lambda=1e-04, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold05: lambda=1e-04, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold05: lambda=0e+00, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold05: lambda=0e+00, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold05: lambda=1e-01, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold05: lambda=1e-01, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold05: lambda=1e-04, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold05: lambda=1e-04, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold05: lambda=0e+00, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold05: lambda=0e+00, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold05: lambda=1e-01, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold05: lambda=1e-01, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold05: lambda=1e-04, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold05: lambda=1e-04, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold05: lambda=0e+00, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold05: lambda=0e+00, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold05: lambda=1e-01, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold05: lambda=1e-01, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold05: lambda=1e-04, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold05: lambda=1e-04, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold05: lambda=0e+00, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold05: lambda=0e+00, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold05: lambda=1e-01, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold05: lambda=1e-01, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold05: lambda=1e-04, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold05: lambda=1e-04, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold05: lambda=0e+00, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold05: lambda=0e+00, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold05: lambda=1e-01, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold05: lambda=1e-01, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold05: lambda=1e-04, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold05: lambda=1e-04, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold05: lambda=0e+00, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold05: lambda=0e+00, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold05: lambda=1e-01, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold05: lambda=1e-01, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold05: lambda=1e-04, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold05: lambda=1e-04, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold05: lambda=0e+00, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold05: lambda=0e+00, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold05: lambda=1e-01, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold05: lambda=1e-01, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold05: lambda=1e-04, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold05: lambda=1e-04, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold05: lambda=0e+00, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold05: lambda=0e+00, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold05: lambda=1e-01, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold05: lambda=1e-01, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold05: lambda=1e-04, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold05: lambda=1e-04, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold06: lambda=0e+00, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold06: lambda=0e+00, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold06: lambda=1e-01, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold06: lambda=1e-01, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold06: lambda=1e-04, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold06: lambda=1e-04, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold06: lambda=0e+00, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold06: lambda=0e+00, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold06: lambda=1e-01, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold06: lambda=1e-01, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold06: lambda=1e-04, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold06: lambda=1e-04, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold06: lambda=0e+00, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold06: lambda=0e+00, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold06: lambda=1e-01, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold06: lambda=1e-01, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold06: lambda=1e-04, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold06: lambda=1e-04, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold06: lambda=0e+00, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold06: lambda=0e+00, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold06: lambda=1e-01, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold06: lambda=1e-01, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold06: lambda=1e-04, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold06: lambda=1e-04, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold06: lambda=0e+00, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold06: lambda=0e+00, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold06: lambda=1e-01, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold06: lambda=1e-01, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold06: lambda=1e-04, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold06: lambda=1e-04, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold06: lambda=0e+00, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold06: lambda=0e+00, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold06: lambda=1e-01, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold06: lambda=1e-01, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold06: lambda=1e-04, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold06: lambda=1e-04, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold06: lambda=0e+00, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold06: lambda=0e+00, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold06: lambda=1e-01, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold06: lambda=1e-01, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold06: lambda=1e-04, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold06: lambda=1e-04, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold06: lambda=0e+00, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold06: lambda=0e+00, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold06: lambda=1e-01, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold06: lambda=1e-01, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold06: lambda=1e-04, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold06: lambda=1e-04, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold06: lambda=0e+00, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold06: lambda=0e+00, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold06: lambda=1e-01, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold06: lambda=1e-01, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold06: lambda=1e-04, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold06: lambda=1e-04, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold07: lambda=0e+00, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold07: lambda=0e+00, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold07: lambda=1e-01, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold07: lambda=1e-01, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold07: lambda=1e-04, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold07: lambda=1e-04, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold07: lambda=0e+00, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold07: lambda=0e+00, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold07: lambda=1e-01, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold07: lambda=1e-01, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold07: lambda=1e-04, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold07: lambda=1e-04, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold07: lambda=0e+00, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold07: lambda=0e+00, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold07: lambda=1e-01, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold07: lambda=1e-01, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold07: lambda=1e-04, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold07: lambda=1e-04, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold07: lambda=0e+00, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold07: lambda=0e+00, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold07: lambda=1e-01, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold07: lambda=1e-01, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold07: lambda=1e-04, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold07: lambda=1e-04, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold07: lambda=0e+00, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold07: lambda=0e+00, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold07: lambda=1e-01, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold07: lambda=1e-01, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold07: lambda=1e-04, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold07: lambda=1e-04, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold07: lambda=0e+00, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold07: lambda=0e+00, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold07: lambda=1e-01, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold07: lambda=1e-01, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold07: lambda=1e-04, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold07: lambda=1e-04, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold07: lambda=0e+00, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold07: lambda=0e+00, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold07: lambda=1e-01, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold07: lambda=1e-01, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold07: lambda=1e-04, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold07: lambda=1e-04, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold07: lambda=0e+00, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold07: lambda=0e+00, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold07: lambda=1e-01, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold07: lambda=1e-01, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold07: lambda=1e-04, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold07: lambda=1e-04, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold07: lambda=0e+00, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold07: lambda=0e+00, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold07: lambda=1e-01, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold07: lambda=1e-01, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold07: lambda=1e-04, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold07: lambda=1e-04, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold08: lambda=0e+00, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold08: lambda=0e+00, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold08: lambda=1e-01, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold08: lambda=1e-01, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold08: lambda=1e-04, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold08: lambda=1e-04, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold08: lambda=0e+00, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold08: lambda=0e+00, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold08: lambda=1e-01, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold08: lambda=1e-01, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold08: lambda=1e-04, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold08: lambda=1e-04, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold08: lambda=0e+00, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold08: lambda=0e+00, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold08: lambda=1e-01, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold08: lambda=1e-01, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold08: lambda=1e-04, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold08: lambda=1e-04, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold08: lambda=0e+00, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold08: lambda=0e+00, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold08: lambda=1e-01, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold08: lambda=1e-01, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold08: lambda=1e-04, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold08: lambda=1e-04, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold08: lambda=0e+00, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold08: lambda=0e+00, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold08: lambda=1e-01, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold08: lambda=1e-01, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold08: lambda=1e-04, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold08: lambda=1e-04, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold08: lambda=0e+00, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold08: lambda=0e+00, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold08: lambda=1e-01, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold08: lambda=1e-01, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold08: lambda=1e-04, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold08: lambda=1e-04, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold08: lambda=0e+00, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold08: lambda=0e+00, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold08: lambda=1e-01, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold08: lambda=1e-01, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold08: lambda=1e-04, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold08: lambda=1e-04, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold08: lambda=0e+00, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold08: lambda=0e+00, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold08: lambda=1e-01, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold08: lambda=1e-01, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold08: lambda=1e-04, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold08: lambda=1e-04, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold08: lambda=0e+00, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold08: lambda=0e+00, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold08: lambda=1e-01, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold08: lambda=1e-01, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold08: lambda=1e-04, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold08: lambda=1e-04, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold09: lambda=0e+00, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold09: lambda=0e+00, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold09: lambda=1e-01, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold09: lambda=1e-01, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold09: lambda=1e-04, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold09: lambda=1e-04, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold09: lambda=0e+00, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold09: lambda=0e+00, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold09: lambda=1e-01, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold09: lambda=1e-01, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold09: lambda=1e-04, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold09: lambda=1e-04, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold09: lambda=0e+00, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold09: lambda=0e+00, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold09: lambda=1e-01, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold09: lambda=1e-01, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold09: lambda=1e-04, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold09: lambda=1e-04, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold09: lambda=0e+00, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold09: lambda=0e+00, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold09: lambda=1e-01, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold09: lambda=1e-01, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold09: lambda=1e-04, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold09: lambda=1e-04, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold09: lambda=0e+00, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold09: lambda=0e+00, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold09: lambda=1e-01, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold09: lambda=1e-01, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold09: lambda=1e-04, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold09: lambda=1e-04, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold09: lambda=0e+00, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold09: lambda=0e+00, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold09: lambda=1e-01, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold09: lambda=1e-01, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold09: lambda=1e-04, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold09: lambda=1e-04, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold09: lambda=0e+00, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold09: lambda=0e+00, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold09: lambda=1e-01, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold09: lambda=1e-01, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold09: lambda=1e-04, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold09: lambda=1e-04, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold09: lambda=0e+00, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold09: lambda=0e+00, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold09: lambda=1e-01, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold09: lambda=1e-01, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold09: lambda=1e-04, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold09: lambda=1e-04, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold09: lambda=0e+00, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold09: lambda=0e+00, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold09: lambda=1e-01, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold09: lambda=1e-01, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold09: lambda=1e-04, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold09: lambda=1e-04, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold10: lambda=0e+00, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold10: lambda=0e+00, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold10: lambda=1e-01, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold10: lambda=1e-01, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold10: lambda=1e-04, alpha=0e+00, nrounds= 50, eta=0.3 
+- Fold10: lambda=1e-04, alpha=0e+00, nrounds= 50, eta=0.3 
++ Fold10: lambda=0e+00, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold10: lambda=0e+00, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold10: lambda=1e-01, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold10: lambda=1e-01, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold10: lambda=1e-04, alpha=1e-01, nrounds= 50, eta=0.3 
+- Fold10: lambda=1e-04, alpha=1e-01, nrounds= 50, eta=0.3 
++ Fold10: lambda=0e+00, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold10: lambda=0e+00, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold10: lambda=1e-01, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold10: lambda=1e-01, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold10: lambda=1e-04, alpha=1e-04, nrounds= 50, eta=0.3 
+- Fold10: lambda=1e-04, alpha=1e-04, nrounds= 50, eta=0.3 
++ Fold10: lambda=0e+00, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold10: lambda=0e+00, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold10: lambda=1e-01, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold10: lambda=1e-01, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold10: lambda=1e-04, alpha=0e+00, nrounds=100, eta=0.3 
+- Fold10: lambda=1e-04, alpha=0e+00, nrounds=100, eta=0.3 
++ Fold10: lambda=0e+00, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold10: lambda=0e+00, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold10: lambda=1e-01, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold10: lambda=1e-01, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold10: lambda=1e-04, alpha=1e-01, nrounds=100, eta=0.3 
+- Fold10: lambda=1e-04, alpha=1e-01, nrounds=100, eta=0.3 
++ Fold10: lambda=0e+00, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold10: lambda=0e+00, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold10: lambda=1e-01, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold10: lambda=1e-01, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold10: lambda=1e-04, alpha=1e-04, nrounds=100, eta=0.3 
+- Fold10: lambda=1e-04, alpha=1e-04, nrounds=100, eta=0.3 
++ Fold10: lambda=0e+00, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold10: lambda=0e+00, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold10: lambda=1e-01, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold10: lambda=1e-01, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold10: lambda=1e-04, alpha=0e+00, nrounds=150, eta=0.3 
+- Fold10: lambda=1e-04, alpha=0e+00, nrounds=150, eta=0.3 
++ Fold10: lambda=0e+00, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold10: lambda=0e+00, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold10: lambda=1e-01, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold10: lambda=1e-01, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold10: lambda=1e-04, alpha=1e-01, nrounds=150, eta=0.3 
+- Fold10: lambda=1e-04, alpha=1e-01, nrounds=150, eta=0.3 
++ Fold10: lambda=0e+00, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold10: lambda=0e+00, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold10: lambda=1e-01, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold10: lambda=1e-01, alpha=1e-04, nrounds=150, eta=0.3 
++ Fold10: lambda=1e-04, alpha=1e-04, nrounds=150, eta=0.3 
+- Fold10: lambda=1e-04, alpha=1e-04, nrounds=150, eta=0.3 
+Aggregating results
+Selecting tuning parameters
+Fitting nrounds = 50, lambda = 0, alpha = 0.1, eta = 0.3 on full training set
+245.556 sec elapsed
+Aggregating results
+Fitting final model on full training set
+6.633 sec elapsed
+Warning message:
+In predict.lm(modelFit, newdata) :
+  prediction from a rank-deficient fit may be misleading
+Aggregating results
+Selecting tuning parameters
+Fitting alpha = 0.1, lambda = 0.831 on full training set
+3.818 sec elapsed
+Aggregating results
+Selecting tuning parameters
+Fitting mtry = 535, splitrule = extratrees, min.node.size = 5 on full training set
+26.22 sec elapsed
+Aggregating results
+Selecting tuning parameters
+Fitting nrounds = 100, lambda = 1e-04, alpha = 0.1, eta = 0.3 on full training set
+24.17 sec elapsed
+
+Call:
+summary.resamples(object = resamples(list(OLS, ElasticNet,
+ RandomForest, boost)))
+
+Models: Model1, Model2, Model3, Model4 
+Number of resamples: 10 
+
+MAE 
+            Min.    1st Qu.     Median       Mean   3rd Qu.        Max. NA's
+Model1 6.4110328 13.8567686 18.8795213 177.558908 59.189093 1447.932304    0
+Model2 3.3698008  3.8852411  4.1484231   4.323218  4.814045    5.425165    0
+Model3 2.4685364  3.2188874  3.5053190   3.587137  3.749399    5.160670    0
+Model4 0.1243347  0.2867356  0.5333679   0.712008  1.023089    1.774947    0
+
+RMSE 
+             Min.   1st Qu.    Median       Mean    3rd Qu.        Max. NA's
+Model1 21.4152876 46.086341 79.132019 586.816462 214.713558 4730.896996    0
+Model2  4.4317448  5.578952  5.865850   5.928413   6.171800    7.343917    0
+Model3  3.2931818  4.342375  5.147369   5.337296   6.078379    8.133997    0
+Model4  0.5411722  1.117834  2.040070   2.679243   3.623740    7.678555    0
+
+Rsquared 
+               Min.    1st Qu.     Median       Mean   3rd Qu.      Max. NA's
+Model1 0.0008294616 0.03692396 0.06681323 0.09891773 0.1657833 0.2589964    0
+Model2 0.8035671223 0.88747990 0.90582885 0.89259247 0.9135947 0.9178754    0
+Model3 0.8586633362 0.92212527 0.93829660 0.93166794 0.9573846 0.9644506    0
+Model4 0.8551211025 0.96359434 0.98693168 0.96933062 0.9946842 0.9992410    0
+

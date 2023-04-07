@@ -1,0 +1,5 @@
+algo,supercomputer,supercomputer-14
+lm,6.443 sec elapsed,6.633 sec elapsed
+Elastic Netc,14.701 sec elapsed,3.818 sec elapsed
+Random Forest,48.747 sec elapsed,26.22 sec elapsed
+Xtreme Gradient Boost,245.556 sec elapsed,24.17 sec elapsed
