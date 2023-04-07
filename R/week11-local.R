@@ -8,15 +8,14 @@ library(doParallel)
 set.seed(331)
 
 ## Data Import and Cleaning
-gss_tbl <- read_sav("../data/GSS2016.sav")%>%
+#deleting other two work hours columns from dataset, changes variable number by two as a check.
+gssoriginal_tbl <- read_sav("../data/GSS2016.sav")%>%
   rename(workhours = MOSTHRS) %>%
-  filter(complete.cases(workhours))
-
-#deleting other two work hours columns from dataset, changes variable number by two as a check. 
-gss_tbl[ ,c('HRS1', 'HRS2')] <- list(NULL)
+  filter(complete.cases(workhours)) %>%
+  select(-'HRS1', -'HRS2')
 
 #removing variables with less than 75% missingless fixed this from last week, was selecting those with more than .75 missingness
-gss_tbl <- gss_tbl[, colSums(is.na(gss_tbl)) < .75 *nrow(gss_tbl)] %>%
+gss_tbl <- gssoriginal_tbl[, colSums(is.na(gssoriginal_tbl)) < .75 *nrow(gssoriginal_tbl)] %>%
   mutate(workhours = as.integer(workhours))
 
 ##Visualization 
@@ -182,9 +181,10 @@ resample_sum <- summary(resamples(list(OLS, ElasticNet, RandomForest, boost)))
 
 table1_tbl <- tibble(
   algo = c("lm","Elastic Net","Random Forest","Xtreme Gradient Boost"),
-  cv_rsq = str_remove(round(
+  cv_rsq = str_remove(
+    format(round(
     resample_sum$statistics$Rsquared[,"Mean"],2
-  ),"^0"),
+  ),nsmall=2),"^0"),
   ho_rsq = str_remove(c(
     format(round(hov_cor_1,2),nsmall=2),
     format(round(hov_cor_2,2),nsmall=2),

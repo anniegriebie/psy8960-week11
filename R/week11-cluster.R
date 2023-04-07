@@ -189,3 +189,10 @@ Table4 <- tibble(
 #output
 write_csv(Table3, "table3.csv")
 write_csv(Table4, "table4.csv")
+
+#1. The model that benefited the most from moving to the supercomputer was the Xtreme Gradient boost model. Without parralllel processing the Xtreme Gradient boost model has by far the longest run time, and then on the supercomputer the runtime was reduced by about 10x which was the greatest reduction compared to any of the other models. 
+#come back to this question.
+
+#2. I believe the relationship between time and the number of cores used is that as the number of cores used increases, the time it takes to run the models decreases. I used 7 cores on my personal computer and doubled that to be 14 cores on the supercomputer. I did not use more than 14 cores o the supercomputer because although the amdsmall MSI partition has 128 cores if I used a number larger than 14 the batch would fail due to overuse of cores. I am not sure if that was happening because there were many other people also using MSI. I assume if I was able to use more than 14 cores the time it would take to run the models would decrease even more. So number of cores is related to efficiency. 
+
+#3.I would choose to use the Random Forest model because it has the highest hoR^2 value output across all tables. Additionally, the Random Forest model took substantially less time than the Xtreme Gradient boost model(the other model that had a high coR^2 value) when the models were not parralelized. In parallelization these the Random Forest Model and Xtreme Gradient Boost models ran at relatively comparable times, and both were relatively short times when run on the supercomputer (within about 2 seconds of each other). Therefore due to the Random Forest having the highest hoR^2 value across models and running at seemingly more reasonable times for both the non-parralelized models and parallelized outputs, I would choose the Random Forest model. Additionally, if given the option I would choose to run a Random Forest Model using parallelization on a Supercomputer because that makes the models run the fastest of the different options for runnin the models. 
