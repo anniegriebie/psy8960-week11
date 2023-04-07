@@ -7,7 +7,7 @@ library(doParallel)
 set.seed(331)
 
 ## Data Import and Cleaning
-gssoriginal_tbl <- read_sav("../data/GSS2016.sav")%>%
+gssoriginal_tbl <- read_sav("GSS2016.sav")%>%
   rename(workhours = MOSTHRS) %>%
   filter(complete.cases(workhours)) %>%
   select(-'HRS1', -'HRS2')
