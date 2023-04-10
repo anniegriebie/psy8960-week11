@@ -90,7 +90,7 @@ hov_cor_4 <- cor(
   test_gss_tbl$workhours
 )^2
 
-
+#changing to 14 because running on supercomputer. Tested and process would be killed with more than 14 cores on Friday.
 local_cluster <- makeCluster(14)
 registerDoParallel(local_cluster)
 
@@ -190,8 +190,7 @@ Table4 <- tibble(
 write_csv(Table3, "table3.csv")
 write_csv(Table4, "table4.csv")
 
-#1. The model that benefited the most from moving to the supercomputer was the Xtreme Gradient boost model. Without parralllel processing the Xtreme Gradient boost model has by far the longest run time, and then on the supercomputer the runtime was reduced by about 10x which was the greatest reduction compared to any of the other models. 
-#come back to this question.
+#1. The model that benefited the most from moving to the supercomputer was the Xtreme Gradient boost model. Without parralllel processing the Xtreme Gradient boost model has by far the longest run time, and then on the supercomputer the runtime was reduced by about 10x which was the greatest reduction compared to any of the other models. I think this has to do with the complexity of the model and the large number of hyperparameters associated with the Xtreme Gradient Boost model thus having more cores with the supercomputer allowed for the greatest amount of improvement. The other models with fewer hyperparameters did not need the larger number of cores and were already running basically as fast as they could with the fewer cores used in the non-supercomputing parallelization model.
 
 #2. I believe the relationship between time and the number of cores used is that as the number of cores used increases, the time it takes to run the models decreases. I used 7 cores on my personal computer and doubled that to be 14 cores on the supercomputer. I did not use more than 14 cores o the supercomputer because although the amdsmall MSI partition has 128 cores if I used a number larger than 14 the batch would fail due to overuse of cores. I am not sure if that was happening because there were many other people also using MSI. I assume if I was able to use more than 14 cores the time it would take to run the models would decrease even more. So number of cores is related to efficiency. 
 

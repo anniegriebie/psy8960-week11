@@ -179,6 +179,7 @@ registerDoSEQ()
 summary(resamples(list(OLS, ElasticNet, RandomForest, boost)))
 resample_sum <- summary(resamples(list(OLS, ElasticNet, RandomForest, boost)))
 
+#fixing table to have only two decimal points and not show leading zeros. 
 table1_tbl <- tibble(
   algo = c("lm","Elastic Net","Random Forest","Xtreme Gradient Boost"),
   cv_rsq = str_remove(
@@ -201,6 +202,6 @@ table2_tbl <- tibble(
   parrallelized = c(timeOLS$callback_msg, timeEN$callback_msg, timeRF$callback_msg, timeboost$callback_msg)
 )
 
-#1. The model that benefited the most from parallelization was the Xtremem gradient boost model, it had the greatest number of seconds in runtime reduced. I think part of this has to do with how long it runs without parallel processing, so it has more room for improvement than some of the other models. 
+#1. The model that benefited the most from parallelization was the Xtremem gradient boost model, it had the greatest number of seconds in runtime reduced. I think part of this has to do with how long it runs without parallel processing, so it has more room for improvement than some of the other models and because it is a more complex model it is helpful for different components of it to be split up more in the parallelization thus leading to increased run time efficiency. 
 #2. The difference between the fastest parallelized model (Elastic Net) and the slowest parallelized model (Random Forest) was about 51 seconds. I think this was because the lm and elastic net models have less parameters and take a shorter amount of time than the other two models in the non-parallelized version. 
 #3. If my supervisor asked me to pick a model for use in a production model I think I would choose the Xtreme Gradient Boost when done using parallelization. The Xtreme Gradient Boost has the highest k-fold CV R^2 value, but takes a very long time to run without parallel processing. However, if parallel processing is an option then it runs takes a very similar amount of time to run as the Random Forest model which also has a high R^2 (although lower than the Xtreme Gradient Boost model) thus I think it is best to use the model with the higher R^2 and therefore suggest the Xtreme Gradient Boost model. 
